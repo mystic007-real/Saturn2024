@@ -20,13 +20,13 @@ body, html {
     100% { background-position: 0% 0%; }
 }
 
-#password-screen, #loading-screen, #under-construction-screen {
+#password-screen, #loading-screen, #main-screen, #vpn-page, #extension-bypass-page {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #333; /* Darker gray for better contrast */
+    color: #333;
     font-family: Arial, sans-serif;
 }
 
@@ -71,4 +71,29 @@ body, html {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    font-size: 18px;
+}
+
+#vpn-page img {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 600px;
 }
