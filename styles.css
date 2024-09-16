@@ -100,8 +100,8 @@ body, html {
 
 .back-button {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    bottom: 20px;
+    right: 20px;
     padding: 10px;
     border-radius: 10px;
     border: none;
