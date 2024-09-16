@@ -49,8 +49,45 @@
         </div>
         <div id="extension-bypass-page" style="display:none;">
             <button class="back-button" onclick="goBack()">Back</button>
-            <h1>Extension Bypass Page</h1>
-            <p>Content for the Extension Bypass will go here.</p>
+            <h1>This will only work with certain blocking extensions, read before replying.</h1>
+            <p>If it doesn't work, it doesn't hurt to try it anyways.</p>
+            <p>If a blocking system requires both an extension and a Chrome App to function, the extension may communicate with the Chrome App over HTTP on the local network interface. If that's the case, HSTS can most likely be used to bypass it.</p>
+            <h2>Dependencies</h2>
+            <ul>
+                <li>A brain</li>
+                <li><a href="chrome://net-internals">chrome://net-internals</a> unblocked</li>
+                <li>A Chrome Extension that comes with a helper Chrome App</li>
+            </ul>
+            <h2>Steps</h2>
+            <ol>
+                <li>Verify that you have an extension that's affected (if you don't, it doesn't hurt to go for it anyways, because this is easy to undo).</li>
+                <li>Open <a href="chrome://net-internals">chrome://net-internals</a> on your school device.</li>
+                <li>Go to the Domain Security Policy tab.</li>
+                <li>Put 127.0.0.1 in the Add HSTS domain's Domain text box.</li>
+                <li>Click Add.</li>
+                <li>Repeat Steps 4 and 5, but use localhost instead of 127.0.0.1.</li>
+                <li>Open <a href="chrome://restart">chrome://restart</a>.</li>
+            </ol>
+            <h2>Known Working Extensions</h2>
+            <ul>
+                <li>Cisco Umbrella</li>
+                <li>iBoss</li>
+            </ul>
+            <h2>Known Not Working</h2>
+            <ul>
+                <li>Securly</li>
+                <li>GoGuardian</li>
+                <li>Anything that doesn't have both a Chrome App and Extension</li>
+            </ul>
+            <h2>Notes</h2>
+            <ul>
+                <li>If you have a force-installed extension and have a Chrome App from the same developer force-installed, it's worth giving this a try.</li>
+                <li>If you discover another filter this works with, reply with the name.</li>
+                <li>If you want someone to check whether an extension is exploitable, just send the application's and extension's Chrome Web Store URLs in a reply.</li>
+                <li>You might have to log out and back in for this to work with certain extensions (this may apply to iBoss).</li>
+            </ul>
+            <h2>How this works</h2>
+            <p>Most websites use HTTPS, but that's impossible on localhost, so they have to use HTTP (since they can't get a TLS certificate). Of course, when you start talking HTTPS with an HTTP server, it can't understand, so if you use this, the extension and the app are effectively firewalled from each other, so the extension can't ask the app whether a site should be blocked or not.</p>
         </div>
     </div>
     <script src="scripts.js"></script>
