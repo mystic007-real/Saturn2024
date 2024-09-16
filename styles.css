@@ -26,7 +26,7 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
+    color: #f0f0f0; /* Lighter gray for better visibility */
     font-family: Arial, sans-serif;
 }
 
