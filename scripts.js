@@ -22,3 +22,9 @@ function showExtensionBypass() {
     document.getElementById('main-screen').style.display = 'none';
     document.getElementById('extension-bypass-page').style.display = 'block';
 }
+
+function goBack() {
+    document.getElementById('vpn-page').style.display = 'none';
+    document.getElementById('extension-bypass-page').style.display = 'none';
+    document.getElementById('main-screen').style.display = 'block';
+}
