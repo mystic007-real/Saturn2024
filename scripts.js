@@ -3,13 +3,12 @@ function checkPassword() {
     if (password === 'SaturnMembers2024') {
         document.getElementById('password-screen').style.display = 'none';
         document.getElementById('loading-screen').style.display = 'block';
-        
         setTimeout(() => {
             document.getElementById('loading-screen').style.display = 'none';
             document.getElementById('main-screen').style.display = 'block';
         }, 5000);
     } else {
-        alert('Incorrect password!');
+        alert('Incorrect password');
     }
 }
 
