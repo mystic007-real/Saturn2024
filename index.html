@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saturn Exploits</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="password-screen">
+            <h1>Saturn</h1>
+            <input type="password" id="password" placeholder="Enter password">
+            <button onclick="checkPassword()">Submit</button>
+        </div>
+        <div id="loading-screen" style="display:none;">
+            <h1>Success! Please wait...</h1>
+            <div class="loader"></div>
+        </div>
+        <div id="under-construction-screen" style="display:none;">
+            <img src="hammer.png" alt="Hammer">
+            <h1>Under Construction...</h1>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
