@@ -8,22 +8,36 @@
 </head>
 <body>
     <div id="container">
-        <div id="password-screen">
-            <h1>Saturn</h1>
-            <input type="password" id="password" placeholder="Enter password">
-            <button onclick="checkPassword()">Submit</button>
+        <!-- Intro Screen -->
+        <div id="intro-screen">
+            <h1>Welcome to Saturn</h1>
+            <button onclick="showApps()">Apps</button>
+            <button onclick="showExploits()">Exploits</button>
         </div>
-        <div id="loading-screen" style="display:none;">
-            <h1>Success! Please wait...</h1>
-            <div class="loader"></div>
+        
+        <!-- Apps Page -->
+        <div id="apps-page" style="display:none;">
+            <button class="back-button" onclick="goBack()">Back</button>
+            <h1>Your Apps</h1>
+            <div class="app-icons">
+                <!-- Add your app icons and links here -->
+                <div class="app-icon"><a href="https://example.com" target="_blank">App 1</a></div>
+                <div class="app-icon"><a href="https://example.com" target="_blank">App 2</a></div>
+                <!-- More icons can be added here -->
+            </div>
         </div>
-        <div id="main-screen" style="display:none;">
+        
+        <!-- Exploits Page -->
+        <div id="exploits-page" style="display:none;">
+            <button class="back-button" onclick="goBack()">Back</button>
             <h1>Here are all the working things that work in our district:</h1>
             <div class="button-container">
                 <button onclick="showVPN()">VPN</button>
                 <button onclick="showExtensionBypass()">Extension Bypass</button>
             </div>
         </div>
+        
+        <!-- VPN Page -->
         <div id="vpn-page" style="display:none;">
             <button class="back-button" onclick="goBack()">Back</button>
             <h1>This is a public VPN that you can use on school Wi-Fi unlike the HSTS Extension Bypass.</h1>
@@ -47,6 +61,8 @@
             </ol>
             <img src="https://cdn.discordapp.com/attachments/1279910227327844433/1279910227524718735/image.png?ex=66e89dc9&is=66e74c49&hm=ab2057f4b8df075e17484a814515aba05dda4ca4ffa1d63fbe1d76936144ee45&" alt="VPN Setup Image">
         </div>
+        
+        <!-- Extension Bypass Page -->
         <div id="extension-bypass-page" style="display:none;">
             <button class="back-button" onclick="goBack()">Back</button>
             <h1>This will only work with certain blocking extensions, read before replying.</h1>
