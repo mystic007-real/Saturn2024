@@ -6,9 +6,19 @@ function checkPassword() {
         
         setTimeout(() => {
             document.getElementById('loading-screen').style.display = 'none';
-            document.getElementById('under-construction-screen').style.display = 'block';
+            document.getElementById('main-screen').style.display = 'block';
         }, 5000);
     } else {
         alert('Incorrect password!');
     }
+}
+
+function showVPN() {
+    document.getElementById('main-screen').style.display = 'none';
+    document.getElementById('vpn-page').style.display = 'block';
+}
+
+function showExtensionBypass() {
+    document.getElementById('main-screen').style.display = 'none';
+    document.getElementById('extension-bypass-page').style.display = 'block';
 }
