@@ -17,8 +17,38 @@
             <h1>Success! Please wait...</h1>
             <div class="loader"></div>
         </div>
-        <div id="under-construction-screen" style="display:none;">
-            <h1>Under Construction...</h1>
+        <div id="main-screen" style="display:none;">
+            <h1>Here are all the working things that work in our district:</h1>
+            <div class="button-container">
+                <button onclick="showVPN()">VPN</button>
+                <button onclick="showExtensionBypass()">Extension Bypass</button>
+            </div>
+        </div>
+        <div id="vpn-page" style="display:none;">
+            <h1>This is a public VPN that you can use on school Wi-Fi unlike the HSTS Extension Bypass.</h1>
+            <p>Things to remember:</p>
+            <ul>
+                <li>It’s not the fastest.</li>
+                <li>You can’t Google search; you will get an error, so put in links only.</li>
+            </ul>
+            <p>STEPS:</p>
+            <ol>
+                <li>Sign in.</li>
+                <li>Do Shift + Alt + S and click the settings gear.</li>
+                <li>Make sure you are in the Networks part.</li>
+                <li>Add connection.</li>
+                <li>Add built-in VPN.</li>
+                <li>Make sure the provider type is L2TP/IPsec.</li>
+                <li>Enter the info below:</li>
+                <li>KEEP THE GROUP NAME BLANK.</li>
+                <li>Make sure you save the identity and password so you don’t have to repeat.</li>
+                <li>This is connected to Japan, so it takes 1 or 2 minutes to get it loading. To check if it’s connected, a key should appear solid next to your clock/wifi/time. If it’s flashing, it’s connecting.</li>
+            </ol>
+            <img src="https://cdn.discordapp.com/attachments/1279910227327844433/1279910227524718735/image.png?ex=66e89dc9&is=66e74c49&hm=ab2057f4b8df075e17484a814515aba05dda4ca4ffa1d63fbe1d76936144ee45&" alt="VPN Setup Image">
+        </div>
+        <div id="extension-bypass-page" style="display:none;">
+            <h1>Extension Bypass Page</h1>
+            <p>Content for the Extension Bypass will go here.</p>
         </div>
     </div>
     <script src="scripts.js"></script>
